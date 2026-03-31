@@ -81,5 +81,28 @@ Page({
 
   goBack: function() {
     wx.navigateBack();
-  }
+  },
+  data: {
+    baziResult: '',
+    characterTags: ['稳重', '聪明', '有耐心', '领导力'],
+    wuxingAdvice: [
+      '适合多接触水属性事物',
+      '颜色适合蓝色、黑色',
+      '方向喜北方',
+    ],
+  },
+
+  onLoad(options) {
+    // 接收从首页传来的八字数据
+    if (options.bazi) {
+      this.setData({
+        baziResult: decodeURIComponent(options.bazi)
+      });
+    }
+  },
+
+  // 返回首页
+  goBack() {
+    wx.navigateBack();
+  },
 });
