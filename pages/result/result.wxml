@@ -1,0 +1,41 @@
+<view class="container">
+  <!-- 顶部标题 -->
+  <view class="header">
+    <text class="title">生辰八字分析报告</text>
+  </view>
+
+  <!-- 八字排盘展示 -->
+  <view class="bazi-section">
+    <text class="section-title">八字排盘</text>
+    <view class="bazi-display">
+      <text>{{baziResult}}</text>
+    </view>
+  </view>
+
+  <!-- 五行占比 -->
+  <view class="wuxing-section">
+    <text class="section-title">五行占比</text>
+    <canvas canvas-id="wuxingChart" class="chart"></canvas>
+  </view>
+
+  <!-- 性格标签 -->
+  <view class="tags-section">
+    <text class="section-title">性格标签</text>
+    <view class="tags">
+      <text wx:for="{{characterTags}}" wx:key="*" class="tag">{{item}}</text>
+    </view>
+  </view>
+
+  <!-- 五行建议 -->
+  <view class="advice-section">
+    <text class="section-title">五行生活建议</text>
+    <view wx:for="{{wuxingAdvice}}" wx:key="*" class="advice-item">
+      <text class="advice-text">{{item}}</text>
+    </view>
+  </view>
+
+  <!-- 底部按钮 -->
+  <view class="footer">
+    <button class="back-btn" bindtap="goBack">返回首页</button>
+  </view>
+</view>

@@ -1,0 +1,49 @@
+<view class="container">
+  <!-- 顶部显示当前时间的天干地支 -->
+  <view class="top-section">
+    <text class="current-time">当前时间：{{currentBazi}}</text>
+  </view>
+
+  <!-- 中间输入表单 -->
+  <view class="form-section">
+    <view class="input-group">
+      <text class="label">出生日期：</text>
+      <view class="date-time-picker">
+        <picker mode="datetime" value="{{birthDateTime}}" bindchange="onDateTimeChange">
+          <view class="picker-display">{{birthDateTime || '请选择出生日期时间'}}</view>
+        </picker>
+      </view>
+      <view class="calendar-switch">
+        <switch checked="{{isLunar}}" bindchange="onCalendarChange"/>
+        <text class="switch-label">{{isLunar ? '农历' : '公历'}}</text>
+      </view>
+    </view>
+
+    <view class="input-group">
+      <text class="label">出生地：</text>
+      <picker mode="selector" range="{{provinceList}}" value="{{provinceIndex}}" bindchange="onProvinceChange">
+        <view class="picker-display">{{provinceList[provinceIndex] || '请选择省份'}}</view>
+      </picker>
+      <picker mode="selector" range="{{cityList}}" value="{{cityIndex}}" bindchange="onCityChange" disabled="{{!provinceIndex}}">
+        <view class="picker-display">{{cityList[cityIndex] || '请选择城市'}}</view>
+      </picker>
+    </view>
+
+    <view class="input-group">
+      <text class="label">性别：</text>
+      <radio-group class="gender-radio" bindchange="onGenderChange">
+        <label class="radio-label">
+          <radio value="1" checked="{{gender === '1'}}"/>男
+        </label>
+        <label class="radio-label">
+          <radio value="2" checked="{{gender === '2'}}"/>女
+        </label>
+      </radio-group>
+    </view>
+  </view>
+
+  <!-- 底部按钮 -->
+  <view class="bottom-section">
+    <button class="submit-btn" bindtap="onSubmit">查阅生辰八字</button>
+  </view>
+</view>

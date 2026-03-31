@@ -1,0 +1,25 @@
+/* app.wxss */
+/* 新中式全局样式 */
+page {
+  background-color: #fafafa;
+  font-family: 'PingFang SC', 'Helvetica Neue', STHeiti, 'Microsoft Yahei', sans-serif;
+}
+
+/* 统一按钮样式 */
+.button {
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+/* 统一文本颜色 */
+.text-primary {
+  color: #333333;
+}
+
+.text-secondary {
+  color: #666666;
+}
+
+.text-accent {
+  color: #c62828; /* 朱砂红 */
+}

@@ -1,0 +1,105 @@
+/* pages/index/index.wxss */
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #fafafa; /* 宣纸白背景 */
+  font-family: 'PingFang SC', 'Helvetica Neue', STHeiti, 'Microsoft Yahei', sans-serif;
+}
+
+.top-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  margin: 15px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.current-time {
+  font-size: 16px;
+  color: #333333;
+  text-align: center;
+}
+
+.form-section {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  justify-content: center;
+}
+
+.input-group {
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-size: 16px;
+  color: #555555;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.date-time-picker,
+.picker-display {
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  padding: 12px;
+  background-color: #ffffff;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #333333;
+}
+
+.calendar-switch {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.switch-label {
+  margin-left: 10px;
+  font-size: 14px;
+  color: #666666;
+}
+
+.gender-radio {
+  display: flex;
+  flex-direction: row;
+}
+
+.radio-label {
+  margin-right: 30px;
+  font-size: 14px;
+  color: #333333;
+}
+
+.bottom-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.submit-btn {
+  width: 80%;
+  height: 50px;
+  background-color: #c62828; /* 朱砂红 */
+  color: #ffffff;
+  border-radius: 25px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  box-shadow: 0 4px 12px rgba(198, 40, 40, 0.3);
+}
+
+.submit-btn:active {
+  background-color: #ad1457;
+}

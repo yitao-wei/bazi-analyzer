@@ -1,0 +1,12 @@
+{
+  "name": "bazi-analyzer",
+  "version": "1.0.0",
+  "description": "知命生辰微信小程序",
+  "main": "app.js",
+  "scripts": {
+    "build": "echo 'Build complete'"
+  },
+  "dependencies": {
+    "lunar-javascript": "^1.7.7"
+  }
+}
