@@ -5,11 +5,18 @@ Page({
   data: {
     currentBazi: '',
     birthDateTime: '',
-    isLunar: false
+    isLunar: false,
+    gender: '1', // 1:男, 2:女
+
+    // 地区相关数据
+    provincename:"北京市",//省
+    cityname:"北京市",//市
+    districtname:"东城区"//
   },
 
   onLoad() {
-    // 获取当前时间的八字
+
+
     this.calculateBazi(new Date());
   },
 
@@ -36,6 +43,17 @@ Page({
       birthDateTime: e.detail.value
     });
   },
+// 省份选择变化：联动更新城市列表
+// pages/index/index.js
+onAddressChange(e){
+  const arry=e.detail.value
+  this.setData({
+    provincename:arry[0],
+    cityname:arry[1],
+    districtname:arry[2]
+  })
+},
+
 
   // 农历/公历切换
   onCalendarChange(e) {
