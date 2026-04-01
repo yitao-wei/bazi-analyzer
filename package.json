@@ -7,8 +7,7 @@
     "build": "echo 'Build complete'"
   },
   "dependencies": {
-    "china-region-data": "^1.3.2",
-    "lunar-javascript": "^1.7.7",
-    "province-city-china": "^8.5.8"
+    "element-china-area-data": "^6.1.0",
+    "lunar-javascript": "^1.7.7"
   }
 }

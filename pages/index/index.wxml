@@ -35,11 +35,9 @@
 
     <view class="input-group">
       <text class="label">出生地：</text>
-      <picker mode="selector" range="{{provinceList}}" value="{{provinceIndex}}" bindchange="onProvinceChange">
-        <view class="picker-display">{{provinceList[provinceIndex] || '请选择省份'}}</view>
-      </picker>
-      <picker mode="selector" range="{{cityList}}" value="{{cityIndex}}" bindchange="onCityChange">
-        <view class="picker-display">{{cityList[cityIndex] || '请选择城市'}}</view>
+      <picker mode="region" value="{{[provincename,cityname,districtname]}}" bindchange="onAddressChange">
+      <view style="margin-left:29%;" wx:if="{{provincename}}">{{provincename+' '+cityname+' '+districtname}}</view>
+      <view style="margin-left:35%;" wx:else>选择所在地区</view>
       </picker>
     </view>
 

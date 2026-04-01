@@ -50,6 +50,7 @@
   margin-bottom: 25px;
   display: flex;
   flex-direction: column;
+  color: #333333
 }
 
 .label {
